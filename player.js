@@ -3,7 +3,7 @@ class Player {
     this.user = ({
       name: playerName, 
       token: token, 
-      wins: [],
+      wins: 0,
       turn: true
     });
     this.id = Date.now();
