@@ -1,16 +1,16 @@
 class Player {
-  constructor(playerName, token){
-    this.user = ({
-      name: playerName, 
-      token: token, 
-      wins: 0,
-      turn: true
-    });
-    this.id = Date.now();
+  constructor(playerName, token, id){
+    this.name = playerName, 
+    this.token = token, 
+    this.wins = 0,
+    this.id = id
+    };
+    
   }
+ 
 
-  increaseWins(){
-    this.wins ++
-  }
-}
+//   increaseWins(){
+//     this.wins ++
+//   }
+// }
 

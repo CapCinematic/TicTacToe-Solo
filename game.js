@@ -1,16 +1,18 @@
 class Game {
-  constructor(win, loss, draw){
+  constructor(player1, player2){
     this.winningCombos = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[3,5,7],[1,5,9]]
-    this.player1 = new Player("Yin", "🤍")
-    this.player2 = new Player("Yang", "🖤")
-    this.currentPlayer = this.player1
+    this.player1 = player1
+    this.player2 = player2
+    this.turn = player1
   }
-
+  switchTurns(){
+    if(this.turn === this.player1){
+     this.turn = this.player2
+    } else if (this.turn === this.player2){
+      this.turn = this.player2
+    }
+  }
   checkForWins(){
-    // Everytime a player uses turn, the token changes to the new currentplayer and they have a turn.
-    // is yin or yang the winner
-    // 
-    
     for (var i = 0; i < this.winningCombos.length; i++){
       var combos = this.winningCombos[i]
       // combos are the mini arrays

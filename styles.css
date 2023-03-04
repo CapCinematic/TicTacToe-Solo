@@ -22,7 +22,7 @@ html body{
   
   height: 600px;
   width: 550px;
-  border: 10px solid;
+  border: 10px solid ;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-row: 33% 33% 33%;
@@ -40,4 +40,8 @@ html body{
   height: 700px;
   width: 200px;
   
+}
+
+.token-box{
+  text-align: center;
 }
