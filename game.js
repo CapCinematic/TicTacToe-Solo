@@ -1,9 +1,6 @@
 class Game {
   constructor(win, loss, draw){
-    // this.win = win
-    // this.loss = loss
-    // this.draw = draw
-    this.winningCombos = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[3,5,7][1,5,9]]
+    this.winningCombos = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[3,5,7],[1,5,9]]
     this.player1 = new Player("Yin", "🤍")
     this.player2 = new Player("Yang", "🖤")
     this.currentPlayer = this.player1
@@ -16,6 +13,7 @@ class Game {
     
     for (var i = 0; i < this.winningCombos.length; i++){
       var combos = this.winningCombos[i]
+      // combos are the mini arrays
       var space1 = document.getElementById(parseInt(combos[0])).innerHTML
       var space2 = document.getElementById(parseInt(combos[1])).innerHTML
       var space3 = document.getElementById(parseInt(combos[2])).innerHTML
