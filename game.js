@@ -47,5 +47,6 @@ class Game {
     this.moves = 0
     this.player1.selectedTiles = []
     this.player2.selectedTiles = []
+    this.winner
   }
 }
