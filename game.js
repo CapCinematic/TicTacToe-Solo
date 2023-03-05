@@ -4,6 +4,8 @@ class Game {
     this.player1 = player1
     this.player2 = player2
     this.turn = player1
+    this.moves = 0
+    this.winner = undefined
   }
   switchTurns(){
     if(this.turn === this.player1){
@@ -13,26 +15,27 @@ class Game {
     }
   }
   checkForWins(){
+    this.moves ++
     for (var i = 0; i < this.winningCombos.length; i++){
       var combos = this.winningCombos[i]
-      // combos are the mini arrays
-      var space1 = document.getElementById(parseInt(combos[0])).innerHTML
-      var space2 = document.getElementById(parseInt(combos[1])).innerHTML
-      var space3 = document.getElementById(parseInt(combos[2])).innerHTML
-      if(this.player1.token === space1 && this.player1.token === space2 && this.player1.token === space3){
+      if(this.player1.selectedTiles.includes(combos[0]) && this.player1.selectedTiles.includes(combos[1]) && this.player1.selectedTiles.includes(combos[2])){
+        this.winner = this.player1
         this.player1.increaseWins()
-        return 'You Won!'
-      } else if (this.player2.token === space1 && this.player2.token === space2 && this.player2.token === space3) {
+        console.log("player1 Wins")
+      } else if (this.player2.selectedTiles.includes(combos[0]) && this.player2.selectedTiles.includes(combos[1]) && this.player2.selectedTiles.includes(combos[2])) {
+        this.winner = this.player2
         this.player2.increaseWins()
-        return "You Won!"
-      } else {
-        this.checkForDraw()
-      }
+        console.log("player 2 wins")
+      } 
     }
     
   }
 // May have to re-order what happens first
   checkForDraw(){
-    return "This is a draw"
+    console.log("checking")
+    if(this.moves === 9 && this.winner){
+      console.log("it was a draw")
+      this.winner = "Draw"
+    }
   }
 }

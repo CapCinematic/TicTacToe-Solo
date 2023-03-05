@@ -2,13 +2,19 @@
   border: 1px red solid;
 }
 
-html body{
+html{
+  height: 100%;
+  width: 100%;
+} 
+
+body{
   margin: 0;
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
   justify-content: center;
+  background-color: blanchedalmond;
 }
 
 .action-section {
@@ -42,6 +48,9 @@ html body{
   
 }
 
-.token-box{
-  text-align: center;
+.token-div{
+  display: flex;
+  border: 1px solid black;
+  width: 80px;
+  height: 50px;
 }

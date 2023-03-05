@@ -4,13 +4,15 @@ class Player {
     this.token = token, 
     this.wins = 0,
     this.id = id
+    this.selectedTiles = []
     };
     
-  }
+    addTile(id){
+      this.selectedTiles.push(Number(id))
+    }
  
-
-//   increaseWins(){
-//     this.wins ++
-//   }
-// }
+  increaseWins(){
+    this.wins ++
+  }
+}
 
