@@ -8,12 +8,16 @@ class Game {
     this.winner = undefined
   }
   switchTurns(){
+    if (event.target.classList === "token-box"){
+
+    }
     if(this.turn === this.player1){
      this.turn = this.player2
     } else if (this.turn === this.player2){
-      this.turn = this.player2
+      this.turn = this.player1
     }
   }
+
   checkForWins(){
     this.moves ++
     for (var i = 0; i < this.winningCombos.length; i++){
@@ -37,5 +41,11 @@ class Game {
       console.log("it was a draw")
       this.winner = "Draw"
     }
+  }
+
+  resetBoard(){
+    this.moves = 0
+    this.player1.selectedTiles = []
+    this.player2.selectedTiles = []
   }
 }

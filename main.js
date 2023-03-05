@@ -22,7 +22,7 @@ function takeTurn(event){
   newGame.turn.addTile(event.target.id)
   newGame.checkForWins()
   newGame.checkForDraw()
-  switchTurns()
+  newGame.switchTurns()
 
 }
 
@@ -36,19 +36,21 @@ function placeToken(event){
 
 }
 
-function switchTurns(){
-  console.log(newGame.turn.token)
-  if(event.target.classList === "token-box"){
+// function switchTurns(){
+//   console.log(newGame.turn.token)
+//   if(event.target.classList === "token-box"){
   
-  }
-  if(newGame.turn === yin){
-   newGame.turn = yang
-   newGame.switchTurns()
-  } else if (newGame.turn === yang){
-    newGame.turn = yin
-  }
+//   }
+//   if(newGame.turn === yin){
+//    newGame.turn = yang
+//    newGame.switchTurns()
+//   } else if (newGame.turn === yang){
+//     newGame.turn = yin
+//   }
+// }
+
+function clearBoard(){
+
 }
-
-
  
 // }
