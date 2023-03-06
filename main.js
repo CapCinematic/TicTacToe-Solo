@@ -25,13 +25,15 @@ function takeTurn(event){
   newGame.switchTurns()
   if(newGame.winner ){
       
-      setTimeout(clearBoard, 5000)
+    setTimeout(clearBoard, 5000)
   }
 
 }
 
 function placeToken(event){
   console.log(event.target.id)
+  console.log(event.target)
+  event.target.disabled = true
   if(newGame.turn === yin){
     event.target.innerText= yin.token
   } else {
@@ -40,21 +42,9 @@ function placeToken(event){
 
 }
 
-// function switchTurns(){
-//   console.log(newGame.turn.token)
-//   if(event.target.classList === "token-box"){
-  
-//   }
-//   if(newGame.turn === yin){
-//    newGame.turn = yang
-//    newGame.switchTurns()
-//   } else if (newGame.turn === yang){
-//     newGame.turn = yin
-//   }
-// }
 
 function clearBoard(){
   newGame.resetBoard
 }
  
-// }
+

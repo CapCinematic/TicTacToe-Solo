@@ -52,4 +52,9 @@ body{
 .token-box{
   border: none;
   background-color: blanchedalmond;
+  color: currentColor;
+}
+
+.token-box:disabled{
+  background-color: red;
 }
