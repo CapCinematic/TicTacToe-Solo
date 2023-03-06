@@ -1,4 +1,5 @@
 var gameDisplay = document.querySelector(".game-display")
+var winCounterBox = document.querySelector(".win-counter")
 console.log(gameDisplay)
 
 class Game {
@@ -24,20 +25,22 @@ class Game {
 
   checkForWins(){ 
     this.moves ++
+    console.log(asideClass)
     for (var i = 0; i < this.winningCombos.length; i++){
       var combos = this.winningCombos[i]
       if(this.player1.selectedTiles.includes(combos[0]) && this.player1.selectedTiles.includes(combos[1]) && this.player1.selectedTiles.includes(combos[2])){
         this.winner = this.player1
         this.player1.increaseWins()
         gameDisplay.innerHTML = `${this.player1.id} Wins!`
+        winCounterBox.innerHTML = this.player1.wins
         // this.resetBoard()
-        this.resetButtons(true)
+        this.buttonSwitch(true)
       } else if (this.player2.selectedTiles.includes(combos[0]) && this.player2.selectedTiles.includes(combos[1]) && this.player2.selectedTiles.includes(combos[2])) {
         this.winner = this.player2
         this.player2.increaseWins()
         gameDisplay.innerHTML = `${this.player2.id} Wins!`
-        console.log(this.player1)
-        this.resetButtons(true)
+        winCounterBox.innerHTML = this.player2.wins
+        this.buttonSwitch(true)
       } 
     }
     
@@ -49,22 +52,23 @@ class Game {
       console.log("it was a draw")
       this.winner = "Draw"
       gameDisplay.innerHTML = `It's a draw!`
+      this.resetButtons(true)
     }
   }
 
-  resetButtons(disabled){
+  buttonSwitch(disabled){
     for (var i = 0; i < tokenBoxes.length; i++){
       tokenBoxes[i].disabled = disabled
     }
   }
   // small function that enables, disables buttons
   resetBoard(){
-    console.log(tokenBoxes)
       if(this.winner === this.player1 || this.winner === this.player2){
         gameDisplay.innerHTML = "Focus On balance"
+        tokenBoxes[i].innerHTML = undefined
         this.turn = this.player1
         this.moves = 0
-        this.resetButtons(false)
+        this.buttonSwitch(false)
       }
       
     }
