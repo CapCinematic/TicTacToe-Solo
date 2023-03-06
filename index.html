@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="./styles.css">
-  <title>Yin Yang Yo</title>
-  <script type="text/javascript" src="./game.js"></script>
-  <script type="text/javascript" src="./player.js"></script>
-  <script type="text/javascript" src="./main.js"></script>
-</head>
-<body>
-  <h1 class="game-title"> Yin Yang Yo! </h1>
-  <section class="game-board">
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Yin Yang Yo</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
     <aside class="aside" id="player-1">
       <h2 class="player-box" id="yin">Yin</h2>
-
     </aside>
-    <section class="action-section" id="current-game">
-      <h4 class="game-display"></h4>
-      <div class="grid-container" id="yin-yang-board">
-        <div class="token-box">1</div>
-        <div class="token-box">2</div>
-        <div class="token-box">3</div>
-        <div class="token-box">4</div>
-        <div class="token-box">5</div>
-        <div class="token-box">6</div>
-        <div class="token-box">7</div>
-        <div class="token-box">8</div>
-        <div class="token-box">9</div>
+    <section class="game-board">
+      <div class="title-box">
+        <h1 class="game-title"> Yin Yang Yo! </h1>
       </div>
+      <div>
+        <h4 class="game-display">WINNER!</h4>
+      </div>
+      <div class="grid-container" id="yin-yang-board">
+        <div class="token-box" id="1"></div>
+        <div class="token-box" id="2"></div>
+        <div class="token-box" id="3"></div>
+        <div class="token-box" id="4"></div>
+        <div class="token-box" id="5"></div>
+        <div class="token-box" id="6"></div>
+        <div class="token-box" id="7"></div>
+        <div class="token-box" id="8"></div>
+        <div class="token-box" id="9"></div>
+        </div>
     </section>
     <aside class="aside" id="player-2">
       <h3 class="player-box" id="yang">Yang</h3>
-
     </aside>
-  </section>
-</body>
+    <script type="text/javascript" src="./player.js"></script>
+    <script type="text/javascript" src="./game.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
 </html>
