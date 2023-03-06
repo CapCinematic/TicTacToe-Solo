@@ -30,11 +30,14 @@ class Game {
         this.winner = this.player1
         this.player1.increaseWins()
         gameDisplay.innerHTML = `${this.player1.id} Wins!`
+        // this.resetBoard()
+        this.resetButtons(true)
       } else if (this.player2.selectedTiles.includes(combos[0]) && this.player2.selectedTiles.includes(combos[1]) && this.player2.selectedTiles.includes(combos[2])) {
         this.winner = this.player2
         this.player2.increaseWins()
         gameDisplay.innerHTML = `${this.player2.id} Wins!`
         console.log(this.player1)
+        this.resetButtons(true)
       } 
     }
     
@@ -49,16 +52,22 @@ class Game {
     }
   }
 
-  disableButton(){
-    
+  resetButtons(disabled){
+    for (var i = 0; i < tokenBoxes.length; i++){
+      tokenBoxes[i].disabled = disabled
+    }
   }
-
+  // small function that enables, disables buttons
   resetBoard(){
-    this.moves = 0
-    this.player1.selectedTiles = []
-    this.player2.selectedTiles = []
-    this.winner = undefined
-    gameDisplay.innerHTML = "Focus On balance"
-  }
+    console.log(tokenBoxes)
+      if(this.winner === this.player1 || this.winner === this.player2){
+        gameDisplay.innerHTML = "Focus On balance"
+        this.turn = this.player1
+        this.moves = 0
+        this.resetButtons(false)
+      }
+      
+    }
+  
 }
 

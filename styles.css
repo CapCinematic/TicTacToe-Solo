@@ -19,11 +19,11 @@ html{
   display: flex;
   justify-content: center;
   box-shadow: inset 0 0 10px navy;
-  
+
 }
 
 body{
-  margin: 0;
+  margin: 0px;
   display: flex;
   flex-direction: row;
   height: 100%;

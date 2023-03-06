@@ -23,11 +23,7 @@ function takeTurn(event){
   newGame.checkForWins()
   newGame.checkForDraw()
   newGame.switchTurns()
-  if(newGame.winner ){
-      
-    setTimeout(clearBoard, 5000)
-  }
-
+  // newGame.resetBoard(event)
 }
 
 function placeToken(event){
@@ -44,6 +40,7 @@ function placeToken(event){
 
 
 function clearBoard(){
+  setTimeout(clearBoard, 5000)
   newGame.resetBoard
 }
  
