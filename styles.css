@@ -1,11 +1,26 @@
 /* *{
   border: 1px red solid;
 } */
-
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
 html{
   height: 100%;
   width: 100%;
 } 
+.title-box{
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0 0 10px green;
+}
+
+.game-display{
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0 0 10px navy;
+  
+}
 
 body{
   margin: 0;
@@ -14,7 +29,7 @@ body{
   height: 100%;
   width: 100%;
   justify-content: center;
-  background-color: blanchedalmond;
+  background-image: url("yin-yang.png");
 }
 
 .action-section {
@@ -25,36 +40,47 @@ body{
 }
 
 .grid-container{
-  background-color: cadetblue;
+  background-color: rgb(14, 27, 28);
   height: 600px;
   width: 550px;
-  /* border: 1px black; */
+  margin: 10px 10px 10px 10px;
+  box-shadow: -2px -8px 8px 6px grey;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-row: 33% 33% 33%; */
   gap: 10px;
  
 }
 #player-1{
-  height: 700px;
+  display: flex;
+  justify-content: center;
+  height: 750px;
   width: 200px;
- background-color: black;
- 
+  background-image: linear-gradient(to right, #a8a4de, #3E5151);
+  box-shadow: inset 0 0 20px rebeccapurple;
+  box-shadow: -3px -10px 10px 7px black;
 }
 
 #player-2{
-  height: 700px;
+  display: flex;
+  justify-content: center;
+  height: 750px;
   width: 200px;
-  background-color: aliceblue;
-  
+  background-image: linear-gradient(to right, #a8a4de, #3E5151);
+  box-shadow: inset 0 0 20px rebeccapurple;
+  box-shadow: 3px 10px 10px 7px black;
 }
 
 .token-box{
-  border: none;
-  background-color: blanchedalmond;
+  border: 10px transparent;
   color: currentColor;
+  background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+}
+.token-box:hover{
+  transition: 1s ease-in-out;
+  background: #282a2c;
+  box-shadow: 20px, 10px, 25px inset;
 }
 
 .token-box:disabled{
-  background-color: red;
+  background-image: radial-gradient(circle farthest-side, white, black);
 }

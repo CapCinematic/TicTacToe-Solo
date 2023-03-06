@@ -50,14 +50,15 @@ class Game {
   }
 
   disableButton(){
-
+    
   }
 
   resetBoard(){
     this.moves = 0
     this.player1.selectedTiles = []
     this.player2.selectedTiles = []
-    this.winner
+    this.winner = undefined
+    gameDisplay.innerHTML = "Focus On balance"
   }
 }
 
