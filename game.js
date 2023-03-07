@@ -1,6 +1,15 @@
 var gameDisplay = document.querySelector(".game-display")
 var winCounterBox = document.querySelector(".win-counter")
-console.log(gameDisplay)
+var winCounterBox2 = document.querySelector(".win-counter2")
+
+var quotes = [
+  "Check Your Vibes",
+  "There is no spoon", 
+  "Time is not real",
+  "Wow!",
+  "Do Your Thing!",
+  "Tic-Tac-No!"]
+
 
 class Game {
   constructor(player1, player2){
@@ -11,7 +20,7 @@ class Game {
     this.moves = 0
     this.winner = undefined
   }
- 
+  
   switchTurns(){
     if (event.target.classList === "token-box"){
 
@@ -23,9 +32,15 @@ class Game {
     }
   }
 
+  buttonSwitch(disabled){
+    for (var i = 0; i < tokenBoxes.length; i++){
+      tokenBoxes[i].disabled = disabled
+    }
+  }
+
   checkForWins(){ 
     this.moves ++
-    console.log(asideClass)
+    gameDisplay.innerText = quotes[getRandomIndex(quotes)]
     for (var i = 0; i < this.winningCombos.length; i++){
       var combos = this.winningCombos[i]
       if(this.player1.selectedTiles.includes(combos[0]) && this.player1.selectedTiles.includes(combos[1]) && this.player1.selectedTiles.includes(combos[2])){
@@ -39,7 +54,7 @@ class Game {
         this.winner = this.player2
         this.player2.increaseWins()
         gameDisplay.innerHTML = `${this.player2.id} Wins!`
-        winCounterBox.innerHTML = this.player2.wins
+        winCounterBox2.innerHTML = this.player2.wins
         this.buttonSwitch(true)
       } 
     }
@@ -47,31 +62,31 @@ class Game {
   }
 // May have to re-order what happens first
   checkForDraw(){
-    console.log("checking")
-    if(this.moves === 9 && this.winner){
+    if(this.moves === 9 && this.winner === undefined){
       console.log("it was a draw")
       this.winner = "Draw"
       gameDisplay.innerHTML = `It's a draw!`
-      this.resetButtons(true)
+      this.buttonSwitch(true)
     }
   }
 
-  buttonSwitch(disabled){
-    for (var i = 0; i < tokenBoxes.length; i++){
-      tokenBoxes[i].disabled = disabled
-    }
-  }
   // small function that enables, disables buttons
   resetBoard(){
-      if(this.winner === this.player1 || this.winner === this.player2){
-        gameDisplay.innerHTML = "Focus On balance"
-        tokenBoxes[i].innerHTML = undefined
-        this.turn = this.player1
+      if(this.winner === this.player1 || this.winner === this.player2 || this.winner === "Draw"){
         this.moves = 0
-        this.buttonSwitch(false)
+        this.player1.selectedTiles = []
+        this.player2.selectedTiles = []
+        // this.player1.wins = 
+        // this.player2.wins = 0
+        this.winner = undefined
+        console.log("Reset Board")
       }
       
     }
   
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
 

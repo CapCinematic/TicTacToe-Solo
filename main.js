@@ -8,41 +8,48 @@ var player1 = document.querySelector("#player-1")
 var player2 = document.querySelector("#player-2")
 var actionSection = document.querySelector(".action-section")
 var tokenBoxes = document.querySelectorAll(".token-box")
-
+// var winCounterBoxDisplay = document.querySelector(".win-counter")
 
 // gameGrid.addEventListener("click", takeTurn)
-console.log(tokenBoxes)
 for (var i = 0; i < tokenBoxes.length; i++){
   tokenBoxes[i].addEventListener("click", takeTurn)
 }
 
 function takeTurn(event){
+  event.target.disabled = true
   console.log(newGame.turn)
   placeToken(event)
   newGame.turn.addTile(event.target.id)
   newGame.checkForWins()
   newGame.checkForDraw()
   newGame.switchTurns()
-  setTimeout(newGame.resetBoard, 5000)
-  // newGame.resetBoard(event)
+  if(newGame.winner){
+    setTimeout(clearBoard, 3000)
+    console.log("reset condition")
+    console.log(yin, yang)
+  }
+  
 }
+  
 
 function placeToken(event){
-  console.log(event.target.id)
-  console.log(event.target)
-  event.target.disabled = true
+  // event.target.disabled = true
   if(newGame.turn === yin){
     event.target.innerText= yin.token
   } else {
     event.target.innerText= yang.token
   }
-
 }
 
 
 function clearBoard(){
- 
-  newGame.resetBoard
+  for (var i = 0; i < tokenBoxes.length; i++){
+    tokenBoxes[i].innerHTML = ""
+    tokenBoxes[i].disabled = false
+  }
+  newGame.resetBoard()
+  gameDisplay.innerHTML = "Focus On balance"
+  console.log("clear board")
 }
  
 
