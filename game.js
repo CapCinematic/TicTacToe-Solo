@@ -22,9 +22,6 @@ class Game {
   }
   
   switchTurns(){
-    if (event.target.classList === "token-box"){
-
-    }
     if(this.turn === this.player1){
      this.turn = this.player2
     } else if (this.turn === this.player2){
