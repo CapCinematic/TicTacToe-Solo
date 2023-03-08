@@ -1,8 +1,3 @@
-var gameDisplay = document.querySelector(".game-display");
-var winCounterBox = document.querySelector(".win-counter");
-var winCounterBox2 = document.querySelector(".win-counter2");
-var titleBox = document.querySelector(".game-title");
-
 class Game {
   constructor(player1, player2) {
     this.winningCombos = [
@@ -88,3 +83,9 @@ class Game {
     }
   }
 }
+
+var gameDisplay = document.querySelector(".game-display");
+var winCounterBox = document.querySelector(".win-counter");
+var winCounterBox2 = document.querySelector(".win-counter2");
+var titleBox = document.querySelector(".game-title");
+
