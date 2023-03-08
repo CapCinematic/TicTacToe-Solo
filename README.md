@@ -50,3 +50,10 @@ A main.js file that contains all DOM related JavaScript
 
 - Overall win was that I completed the project and I'm proud of how it came out.
 
+# Set Up Instructions
+Repository: https://github.com/CapCinematic/TicTacToe-Solo 
+- Fork repository 
+- Clone repository onto local machine
+- CD into new cloned directory
+- Run Open index.html
+- Have a good time!
