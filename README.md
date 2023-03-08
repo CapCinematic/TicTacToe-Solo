@@ -18,25 +18,25 @@ I used Trello to organize my iterations and hold all links necessary to help me 
 
 My application consist of one HTML file one CSS file and three JavaScript files:
 
-- A player.js file that contains a Player class.
+# A player.js file that contains a Player class.
 
-Player methods include, but are not limited to:
+# Player methods include, but are not limited to:
 A constructor - properties should include: id (ex: 'one'), token (ex:'⭐️'), wins (ex: 0)
 An increaseWins function - increases the count of the player’s wins
 
-- A game.js file that contains a Game class.
+# A game.js file that contains a Game class.
 
-Game Class includes:
+# Game Class includes:
 
-Two Player instances
-A way to keep track of the data for the game board
-A way to keep track of which player’s turn it currently is
-A way to check the Game’s board data for win conditions
-A way to detect when a game is a draw (no one has won)
-A way to reset the Game’s board to begin a new game
+- Two Player instances
+- A way to keep track of the data for the game board
+- A way to keep track of which player’s turn it currently is
+- A way to check the Game’s board data for win conditions
+- A way to detect when a game is a draw (no one has won)
+- A way to reset the Game’s board to begin a new game
 
-- A main.js file that contains all DOM related JavaScript
-  Running several functions and query selecting sections of my HTML to connect data to the Dom.
+# A main.js file that contains all DOM related JavaScript
+- Running several functions and query selecting sections of my HTML to connect data to the Dom.
 
 # Future features:
 
@@ -44,7 +44,7 @@ A way to reset the Game’s board to begin a new game
 - Music
 - Local Storage
    
-- Wins/Challenges:
+# Wins/Challenges:
 
 - I worked through a few challenges. In my planning stage I decided on the idea to use an array of winning combantions arrays. Implementing the function and adjusting the logic proved to take up quite a bit of time. After connecting with Will Mitchell(Director of Front End Engineering) on a zoom call I was able to find some clarity. 
 
