@@ -21,7 +21,7 @@ My application consist of one HTML file one CSS file and three JavaScript files:
 - A player.js file that contains a Player class.
 
 Player methods include, but are not limited to:
-A constructor - properties should include: id (ex: 'one'), token (ex: '⭐️'), wins (ex: 0)
+A constructor - properties should include: id (ex: 'one'), token (ex:'⭐️'), wins (ex: 0)
 An increaseWins function - increases the count of the player’s wins
 
 - A game.js file that contains a Game class.
