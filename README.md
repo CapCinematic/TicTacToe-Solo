@@ -1,4 +1,6 @@
-# TicTacToe-Solo
+Screenshots of functioning app
+![tic-tac-toe/game](assets/Screenshot1.png)
+![tic-tac-toe/game/win](assets/ScreenShotWin.png)
 
 ## Solidify and demonstrate your understanding of:
 
@@ -48,5 +50,3 @@ A main.js file that contains all DOM related JavaScript
 
 - Overall win was that I completed the project and I'm proud of how it came out.
 
-
-Screenshots or video of your functioning app
