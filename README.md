@@ -1,7 +1,5 @@
 # TicTacToe-Solo
 
-Overview of my project and goals:
-
 ## Solidify and demonstrate your understanding of:
 
 - DRY JavaScript
@@ -16,17 +14,13 @@ I used Trello to organize my iterations and hold all links necessary to help me 
 
 # Tic-Tac-Toe Architecture:
 
-My application consist of one HTML file one CSS file and three JavaScript files:
+## My application consist of one HTML file one CSS file and three JavaScript files:
 
-# A player.js file that contains a Player class.
-
-# Player methods include, but are not limited to:
+Player methods include, but are not limited to:
 A constructor - properties should include: id (ex: 'one'), token (ex:'⭐️'), wins (ex: 0)
 An increaseWins function - increases the count of the player’s wins
 
-# A game.js file that contains a Game class.
-
-# Game Class includes:
+## Game Class includes:
 
 - Two Player instances
 - A way to keep track of the data for the game board
@@ -35,7 +29,7 @@ An increaseWins function - increases the count of the player’s wins
 - A way to detect when a game is a draw (no one has won)
 - A way to reset the Game’s board to begin a new game
 
-# A main.js file that contains all DOM related JavaScript
+A main.js file that contains all DOM related JavaScript
 - Running several functions and query selecting sections of my HTML to connect data to the Dom.
 
 # Future features:
